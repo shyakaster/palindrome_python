@@ -1,0 +1,16 @@
+{% extends "layout.html"%}
+{% block content %}
+    <h1>Palindrome result</h1>
+        {% if is_palindrome %}
+            <div class="result result-success">
+                <p>"{{phrase}}" is a palindrome!</p>
+            </div>
+        {% else %}
+            <div class="result result-fail">
+                <p>"{{phrase}}" isn't a palindrome.</p>
+            </div>
+        {%endif%}
+        <h1>Try another one</h1>
+        {% include "palindrome_form.html" %}
+
+{% endblock %}
