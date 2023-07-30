@@ -36,7 +36,7 @@ def create_app(test_config=None):
     def check():
         phrase=request.form["phrase"]
         is_palindrome=Phrase(phrase).ispalindrome()
-        return render_template("results.html", 
+        return render_template("results.html", page_title="Results",
                                is_palindrome=is_palindrome,phrase=phrase)
     return app
 
